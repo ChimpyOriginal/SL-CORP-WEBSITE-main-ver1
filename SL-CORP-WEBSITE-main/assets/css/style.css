@@ -75,7 +75,7 @@ input[type="checkbox"] {
     display: block;
   }
 
-  #click:checked~.menu-btn i:before {
+  #click:checked ~ .menu-btn i:before {
     content: "\f00d";
   }
 
@@ -91,7 +91,7 @@ input[type="checkbox"] {
     transition: all 0.3s ease;
   }
 
-  #click:checked~ul {
+  #click:checked ~ ul {
     left: 0;
   }
 
@@ -108,14 +108,14 @@ input[type="checkbox"] {
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
-  #click:checked~ul li a {
+  #click:checked ~ ul li a {
     margin-left: 0px;
   }
 
   nav ul li a.active,
   nav ul li a:hover {
     background: none;
-    color: #FFCC00;
+    color: #ffcc00;
   }
 }
 
@@ -125,65 +125,63 @@ input[type="checkbox"] {
 
 /*INICIA ESTRUCTURA SLIDES*/
 .contenedor {
-  width: 100%;
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  width: 100%; /* Ancho completo */
+  height: 100vh; /* Alto completo del viewport height*/
+  overflow-y: scroll; /* Desplazamiento vertical */
+  scroll-snap-type: y mandatory; /*scroll en bloques completos*/
 }
 
 .slides {
-  width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
+  width: 100%; /* Ancho completo */
+  height: 100vh; /* Alto completo del viewport height*/
+  scroll-snap-align: start; /* Alineación de inicio */
 }
-
 /*TERMINA ESTRUCTURA SLIDES/*
 
 /* ---------------------------- */
 
 /*INICIA SECCIÓN 1 HERO*/
 .slide1 {
-  background-image: url("../img/Imagen-hero.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../img/Imagen-hero.jpeg"); /* Agregamos la imagen de fondo */
+  background-size: cover; /* Ajustamos el tamaño de la imagen */
+  background-repeat: no-repeat; /* No repetir la imagen */
+  background-position: center; /* Centramos la imagen */
 }
 .S1-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Para centrar el contenido */
+  flex-direction: column; /* Alineación de columnas */
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
 }
-.S1-title{
-  font-size: 4rem;
+.S1-title {
+  font-size: 4rem; /* Tamaño de fuente */
   font-weight: 700;
   text-align: center;
-  letter-spacing: 1;  
-  color:white;
-  margin-top: 70vh;
+  letter-spacing: 1; /* Espaciado entre letras */
+  color: white;
+  margin-top: 70vh; /* Margen superior */
   background-color: rgba(40, 45, 64, 0.5); /* 50% de transparencia */
   width: 100vw;
   padding: 1%;
 }
 .S1-amarillo {
   color: #ffd700;
-  font-weight: 700;
+  font-weight: 700; /* Peso de la fuente */
 }
 /*TERMINA SECCIÓN 1 HERO*/
 
-
 /*INICIA SECCIÓN 2*/
 .S2-container {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
+  position: relative;/* Necesario para posicionar el texto */
+  width: 100vw;/* Ancho completo */
+  height: 100vh;/* Alto completo */
+  display: flex;/* Para centrar el texto fácilmente */
+  overflow: hidden; /* Para ocultar el desbordamiento de la imagen */
 }
 
 .fondo {
-  width: 50%;
-  height: 100%;
+  width: 50%; /* Ancho de la imagen */
+  height: 100%;   /* Alto completo */
   position: relative; /* Necesario para posicionar el texto dentro */
   display: flex; /* Para centrar el texto fácilmente */
   justify-content: center; /* Centrado horizontal */
@@ -192,65 +190,64 @@ input[type="checkbox"] {
 
 .fondo-izquierda {
   background-image: url("../img/fondo-cielo.png"); /* Agregamos la imagen de fondo */
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ajustamos el tamaño de la imagen */
+  background-position: center;  /* Centramos la imagen */
 }
 
 .fondo-derecha {
   background-image: url("../img/fondo-blanco.png"); /* Agregamos la imagen de fondo */
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ajustamos el tamaño de la imagen */
+  background-position: center;  /* Centramos la imagen */
 }
 
 .imagen-central {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 48vw;
-  height: auto;
-  z-index: 10;
+  position: absolute;   /* Posicionamos la imagen */
+  top: 65%; /* Alineamos la imagen al centro */
+  left: 50%;    /* Alineamos la imagen al centro */
+  transform: translate(-50%, -50%); /* Centramos la imagen */
+  width: 48vw;  /* Ancho de la imagen */
+  height: auto; /* Alto automático */
+  z-index: 10;  /* Capa superior */
 }
 
 .S2-text-left {
-  display: flex;
+  display: flex;/* Para centrar el texto fácilmente */
   flex-direction: column;
-  justify-items: flex-start;
-  align-items: center;
+  justify-items: flex-start; /* Centrado horizontal al inicio del flex*/
+  align-items: center;/* Centrado vertical */
   font-family: "Buenard", serif;
-  letter-spacing: 1;
-  line-height: 0.9;
-  display: flex;
-  justify-content: flex-start;
+  letter-spacing: 1;  /* Espaciado entre letras */
+  line-height: 0.9;/* Espaciado entre líneas */
+  justify-content: flex-start; /* Alineación de contenido */
   align-content: flex-start;
   padding: 10%;
-  margin-right: 15%;
+  margin-right: 15%;/* Margen derecho */
   text-align: center;
-  font-size: 600%;
-  color: #ffffff;
+  font-size: 600%;/* Tamaño de fuente */
+  color: #ffffff;/* Color de texto */
 }
 .S2-text-right {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;   /* Alineación de contenido */
   align-content: flex-end;
   padding: 12%;
   margin-left: 18%;
   margin-top: 10%;
-  text-align: right;
+  text-align: right;  /* Alineación de texto a la derecha*/
   font-size: 160%;
   color: #282d40;
-  line-height: 1.3;
+  line-height: 1.3;   /* Espaciado entre líneas */     
 }
 
 .boton-amarillo {
   background-color: #ffd700; /* Amarillo dorado */
   color: black;
   padding: 15px 30px;
-  border: none;
+  border: none;   /* Sin borde */
   border-radius: 40px; /* Bordes redondeados */
   font-size: 28px;
   font-weight: 700;
-  cursor: pointer;
+  cursor: pointer; /* Cursor de apuntador */
   transition: background-color 0.3s ease; /* Transición suave */
   margin-top: 10%;
   width: 65%;
@@ -261,12 +258,12 @@ input[type="checkbox"] {
   background-color: #ffc300; /* Amarillo un poco más oscuro al pasar el mouse */
 }
 
-.texto-seccion-dos-responsive{
-  display: none;
+.texto-seccion-dos-responsive { 
+  display: none; /* Ocultamos el texto en dispositivos pequeños */
 }
 
-.imagen-central-responsive:nth-child(2){
-  display: none;
+.imagen-central-responsive:nth-child(2) {       
+  display: none; /* Ocultamos la imagen en dispositivos pequeños */
 }
 
 /*TERMINA SECCIÓN 2*/
@@ -274,7 +271,7 @@ input[type="checkbox"] {
 /*SECCION FISCAL Y CORPORATIVA*/
 
 .container2 {
-  font-family: 'Anton SC', sans-serif;
+  font-family: "Anton SC", sans-serif;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -282,20 +279,15 @@ input[type="checkbox"] {
   justify-content: center;
   min-height: 100vh;
   position: relative;
-
-
 }
 
 .fondo3 {
-  background-image: url('../img/fondo_sf.jpg');
+  background-image: url("../img/fondo_sf.jpg");
   background-size: cover;
   background-position: top;
   width: 100%;
   height: 60vh;
   opacity: 0.7;
-
-
-
 }
 
 .container2::before {
@@ -305,11 +297,9 @@ input[type="checkbox"] {
   height: 100%;
   bottom: 0;
   left: 0;
-  background: #282D40;
+  background: #282d40;
   z-index: -1;
 }
-
-
 
 .S3-title {
   font-family: "Buenard", serif;
@@ -322,13 +312,12 @@ input[type="checkbox"] {
   transform: translateY(-350px);
   padding: 0%;
   margin-bottom: -50px;
-
 }
 
 .content {
   text-align: center;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   max-width: 80%;
   margin: 1rem auto;
@@ -336,9 +325,7 @@ input[type="checkbox"] {
   display: flex;
   line-height: 30px;
   transform: translateY(-250px);
-
 }
-
 
 .servicios {
   display: flex;
@@ -365,7 +352,6 @@ input[type="checkbox"] {
   height: 200px;
   cursor: pointer;
 }
-
 
 .servicios .icono1 img,
 .servicios .icono2 img,
@@ -396,22 +382,17 @@ input[type="checkbox"] {
   pointer-events: none;
 }
 
-
 .servicios .icono1:hover,
 .servicios .icono2:hover,
 .servicios .icono3:hover {
   transform: translateY(-90px);
 }
 
-
 .servicios .icono1:hover h2,
 .servicios .icono2:hover h2,
 .servicios .icono3:hover h2 {
   opacity: 0;
 }
-
-
-
 
 .servicios .icono1:hover h3,
 .servicios .icono2:hover h3,
@@ -425,7 +406,7 @@ input[type="checkbox"] {
 .servicios .icono1 h2,
 .servicios .icono2 h2,
 .servicios .icono3 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: #fff;
   font-size: 24px;
@@ -433,8 +414,6 @@ input[type="checkbox"] {
   text-align: center;
   pointer-events: none;
 }
-
-
 
 .servicios hr {
   width: 3px;
@@ -448,21 +427,21 @@ input[type="checkbox"] {
 
 /*INICIA SECCIÓN 4*/
 .slide4 {
-  background-image: url("/assets/img/S4-fondo.jpg");
+  background-image: url("/assets/img/S4-fondo.jpg"); /*Fondo para toda la sección */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .S4-title {
-  font-size: 4.5rem;
-  font-weight: 700;
+  font-size: 4.5rem; /* Tamaño de fuente del título */
+  font-weight: 700; /*Título en negritas*/
   text-align: center;
   padding-top: 15vh;
-  font-family: "Buenard", serif;
-  letter-spacing: 1;
+  font-family: "Buenard", serif; /* Fuente para el título */
+  letter-spacing: 1; /* Espaciado entre letras */
 }
 .S4-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Tamaño de fuente del subtítulo*/
   text-align: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
@@ -470,7 +449,7 @@ input[type="checkbox"] {
 .S4-wrapper {
   width: 100%;
   height: 50vh;
-  display: flex;
+  display: flex; /* Para centrar el contenido */
   align-items: center;
   justify-content: center;
 }
@@ -478,75 +457,75 @@ input[type="checkbox"] {
 .S4-container {
   height: 400px;
   width: 70vw;
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex; /* Para centrar el contenido */
+  flex-wrap: nowrap; /* No se desborda */
   justify-content: center;
 }
 
 .S4-card {
   width: 100px;
-  border-radius: 0.75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
+  background-size: cover; /* Ajustamos el tamaño de la imagen */
+  cursor: pointer; /* Cursor de apuntador */
+  overflow: hidden;   /* Ocultamos el desbordamiento */
+  border-radius: 2rem;  /* Bordes redondeados */
+  margin: 0 10px; /* Margen a los lados*/
   display: flex;
-  align-items: flex-end;
-  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  align-items: flex-end; /* Alineación de elementos al final */
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99); /* Transición suave */
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8); /* Sombra */
 }
 
 .S4-card > .row {
   color: white;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* No se desborda */
 }
 
-.S4-card > .row > .icon {
-  background: #223;
+.S4-card > .row > .icon { 
+  background: #223;  /* Fondo del ícono */
   color: white;
-  border-radius: 50%;
-  width: 50px;
-  display: flex;
+  border-radius: 50%; /* Bordes redondeados */
+  width: 50px; /* Ancho del ícono */
+  display: flex; /* Para centrar el contenido */
   justify-content: center;
   align-items: center;
-  margin: 15px 15px 15px 25px;
+  margin: 15px 15px 15px 25px; /* Margen */
 }
 
 .S4-card > .row > .description {
-  display: flex;
+  display: flex; /* Para centrar el contenido */
   justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
+  flex-direction: column; /* Alineación de columnas */
+  overflow: hidden; /* Ocultamos el desbordamiento */
   height: 80px;
   width: 520px;
   opacity: 0;
-  transform: translateY(30px);
-  transition-delay: 0.3s;
-  transition: all 0.3s ease;
+  transform: translateY(30px); /* Desplazamiento vertical */
+  transition-delay: 0.3s; /* Retraso de la transición */
+  transition: all 0.3s ease; /* Transición suave */
 }
 
 .description h4 {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Texto en mayúsculas */
   font-size: 1.1rem;
   font-weight: 700;
-  color:white;
+  color: white;
 }
 
-input {
-  display: none;
+input { 
+  display: none; /* Ocultamos el input */
 }
 
-input:checked + label {
-  width: 600px;
+input:checked + label { /* Seleccionamos la tarjeta */
+  width: 600px; /* Ancho de la tarjeta */
 }
 
-input:checked + label .description {
-  opacity: 1 !important;
+input:checked + label .description { 
+  opacity: 1 !important; /* Opacidad */
   transform: translateY(0) !important;
 }
 
+/*Imagenes de fondo de las tarjetas*/
 .S4-card[for="c1"] {
   background-image: url("../img/Servicios\ Contables\ y\ Fiscales.jpg");
 }
@@ -566,9 +545,6 @@ input:checked + label .description {
   background-image: url("../img/Auditoria\ Financiera\ y\ Control\ Interno.jpg");
 }
 
-
-
-
 /*SECCION RESEÑA*/
 
 .section4__container {
@@ -579,10 +555,8 @@ input:checked + label .description {
 
   padding-bottom: 10px;
   text-align: center;
-  background-color: #FBF8F2;
-
+  background-color: #fbf8f2;
 }
-
 
 .header {
   margin-bottom: 2rem;
@@ -597,7 +571,6 @@ input:checked + label .description {
 }
 
 .header h1 {
- 
   font-size: 1.5rem;
   margin-top: 10px;
   font-weight: 500;
@@ -654,7 +627,7 @@ input:checked + label .description {
 }
 
 .card .name:hover {
-  color: #FFCC00;
+  color: #ffcc00;
 }
 
 .footer h4 {
@@ -684,306 +657,299 @@ input:checked + label .description {
   cursor: pointer;
 }
 
-
 /*RESPONSIVE*/
-
 
 @media (max-width: 1200px) {
   /*SECCIÓN 1*/
-  .S1-title{
-   font-size: 2rem;
-   font-weight: 700;
-   text-align: center;
-   letter-spacing: 1;  
-   color:white;
-   margin-top: 70vh;
-   background-color: rgba(40, 45, 64, 0.5); /* 50% de transparencia */
-   width: 100vw;
-   padding: 3%;
- }
- /*SECCIÓN 4 RESPONSIVE*/
- .S4-title {
-   font-size: 2.8rem;
-   font-weight: 700;
-   text-align: center;
-   padding-top: 10vh;
-   font-family: "Buenard", serif;
-   letter-spacing: 1;
- }
- .S4-subtitle {
-   font-size: 1.3rem;
-   text-align: center;
-   padding: 1vh 2vh 2vh 2vh;
- }
- .S4-container {
-   flex-direction: column;
-   height: 100vh;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-   padding: 5%;
-   margin-top: 30%;
- }
- .S4-card {
-   width: 100%; /* Ocupa el ancho completo */
-   height: 8vh;
-   margin: 10px 0;
- }
- input:checked + label {
-   width: 100%;
-   height: 20vh; /* Expande la tarjeta seleccionada */
- }
+  .S1-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1;
+    color: white;
+    margin-top: 70vh;
+    background-color: rgba(40, 45, 64, 0.5); /* 50% de transparencia */
+    width: 100vw;
+    padding: 3%;
+  }
+  /*SECCIÓN 4 RESPONSIVE*/
+  .S4-title {
+    font-size: 2.8rem; /* Tamaño de fuente más pequeño para el título */
+    font-weight: 700;
+    text-align: center;
+    padding-top: 10vh; /* Margen superior */
+    font-family: "Buenard", serif; /* Fuente para el título */
+    letter-spacing: 1;
+  }
+  .S4-subtitle {
+    font-size: 1.3rem; /* Tamaño de fuente más pequeño para el subtítulo */
+    text-align: center;
+    padding: 1vh 2vh 2vh 2vh;
+  }
+  .S4-container {
+    flex-direction: column; /* Alineación de columnas */
+    height: 100vh; /* Alto completo */
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    margin-top: 30%;
+  }
+  .S4-card {
+    width: 100%; /* Ocupa el ancho completo */
+    height: 8vh;
+    margin: 10px 0;
+  }
+  input:checked + label {
+    width: 100%;
+    height: 20vh; /* Expande la tarjeta seleccionada */
+  }
 }
 
 @media (max-width: 800px) {
-  
- /*SECCIÓN 4 RESPONSIVE*/
- .S4-title {
-   font-size: 2.5rem;
-   font-weight: 700;
-   text-align: center;
-   padding-top: 10vh;
-   font-family: "Buenard", serif;
-   letter-spacing: 1;
- }
- .S4-subtitle {
-   font-size: 0.8rem;
-   text-align: center;
-   margin: 0vh 2vh 3vh 2vh;
- }
- input:checked + label {
-   width: 100%;
-   height: 20vh; /* Expande la tarjeta seleccionada */
- }
+  /*SECCIÓN 2 RESPONSIVE*/
+  .fondo {
+    width: 100%; /* Ancho completo */
+  }
+  .S2-container {
+    display: flex;
+    flex-direction: column; /*Se cambia el display a columna */
+    font-size: auto; /* Tamaño de fuente automático */
+    height: 100%;
+  }
+  .fondo-derecha {
+    display: flex; 
+    height: 50%; 
+  }
 
- .S4-card > .row > .description { 
-   display: flex; 
-   justify-content: flex-end; 
-   flex-direction: column; 
-   overflow: hidden; 
-   height: 80px; 
-   width: 280px; 
-   opacity: 0; 
-   transform: translateY(30px); 
-   transition-delay: .3s; 
-   transition: all .3s ease; 
- }
- 
- .description h4 {
-   text-transform: uppercase;
-   font-size: 1.1rem;
-   font-weight: 700;
-   padding-bottom: 1.8vh;
- }
- /*SECCIÓN 2 RESPONSIVE*/
- .fondo {
-   width: 100%;
- }
- .S2-container {
-   display: flex;
-   flex-direction: column;
-   font-size: auto;
-   height: 100%;
- }
- .fondo-derecha {
-   display: flex;
-   height: 50%;
- }
+  .fondo-izquierda {
+    height: 45%;
+    overflow: hidden; /* Ocultamos el desbordamiento */
+  }
 
- .fondo-izquierda {
-   height: 45%;
-   overflow: hidden;
- }
+  .S2-text-left {
+    font-size: 200%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0; 
+    margin: 0;
+  }
 
- .S2-text-left {
-   font-size: 200%;
-   display: flex;
-   align-content: center;
-   justify-content: center;
-   padding: 0;
-   margin: 0;
- }
+  .S2-text-right {
+    font-size: 1.5vh;   
+    text-align: center;
+    align-self: center; 
+    padding: 0;
+    margin: 0;
+    width: 80%;
+    margin-top: 5%;  /* Margen superior */
+  }
+  .title-seccion-2-responsive {
+    color: #111;
+    font-family: "Buenard", serif;
+    border-bottom: solid; /* Línea inferior */
+    border-color: #111; /* Color de la línea */
+    width: 80vw;
+    height: 12vh;
+  }
+  .imagen-central-responsive:nth-child(2) { 
+    display: flex;
+    width: 80vw;
+    overflow: hidden;
+  }
+  .imagen-central-responsive {
+    display: none; /* Ocultamos la imagen en dispositivos pequeños */
+  }
 
- .S2-text-right {
-   font-size: 1.5vh;
-   text-align: center;
-   align-self: center;
-   padding: 0;
-   margin: 0;
-   width: 80%;
-   margin-top: 5%;
- }
- .title-seccion-2-responsive {
-   color: #111;
-   font-family: "Buenard", serif;
-   font-family: "Buenard", serif;
-   border-bottom: solid;
-   border-color: #111;
-   width: 80vw;
-   height: 12vh;
- }
- .imagen-central-responsive:nth-child(2) {
-   display: flex;
-   width: 80vw;
-   overflow: hidden;
- }
- .imagen-central-responsive {
-   display: none;
- }
+  .texto-seccion-dos-responsive {
+    display: flex;  /* Mostramos el texto en dispositivos pequeños */
+  }
+  .texto-seccion-dos-responsive h1 {
+    color: #282d40;
+    font-family: "Buenard", serif; /* Fuente para el título*/
+    font-weight: 700;
+    border-bottom: solid; /* Línea inferior */
+    border-color: #282d40; /* Color de la línea */
+    width: 80%;
+    font-size: 120%;
+    padding-bottom: 1.5%;
+  }
+  .texto-seccion-dos-desktop {
+    display: none; /* Ocultamos el texto en dispositivos grandes */
+  }
 
- .texto-seccion-dos-responsive {
-   display: flex;
- }
- .texto-seccion-dos-responsive h1 {
-   color: #282d40;
-   font-family: "Buenard", serif;
-   font-weight: 700;
-   border-bottom: solid;
-   border-color: #282d40;
-   width: 80%;
-   font-size: 120%;
-   padding-bottom: 1.5%;
- }
- .texto-seccion-dos-desktop {
-   display: none;
- }
+  .texto-seccion-izquierdo-desktop button {
+    display: none; /* Ocultamos el botón en dispositivos grandes */
+  }
 
- .texto-seccion-izquierdo-desktop button {
-   display: none;
- }
+  .texto-seccion-izquierdo-desktop { 
+    font: none; /* Sin fuente */
+    font-size: 0; /* Para que el texto no se vea*/
+  }
+  .boton-amarillo {
+    background-color: #ffd700; /* Amarillo dorado */
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 40px; /* Bordes redondeados */
+    font-size: 18px !important; 
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 10%;
+    width: 65%;
+    height: 7vh;
+  }
+  /*SECCIÓN 4 RESPONSIVE*/
+  .S4-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 10vh;
+    font-family: "Buenard", serif;
+    letter-spacing: 1;
+  }
+  .S4-subtitle {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0vh 2vh 3vh 2vh;
+  }
+  input:checked + label {
+    width: 100%;
+    height: 20vh; /* Expande la tarjeta seleccionada */
+  }
 
- .texto-seccion-izquierdo-desktop {
-   font: none;
-   font-size: 0;
- }
- .boton-amarillo {
-   background-color: #ffd700; /* Amarillo dorado */
-   color: black;
-   padding: 15px 30px;
-   border: none;
-   border-radius: 40px; /* Bordes redondeados */
-   font-size: 18px!important;
-   font-weight: 700;
-   cursor: pointer;
-   transition: background-color 0.3s ease; /* Transición suave */
-   margin-top: 10%;
-   width: 65%;
-   height: 7vh;
- }
+  .S4-card > .row > .description {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 280px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+  }
+
+  .description h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 1.8vh;
+  }
 }
 
 /*TERMINA SECCIÓN 2*/
 
 @media (max-width: 400px) {
- 
- /*SECCIÓN 2*/
- .imagen-central-responsive:nth-child(2) {
-   display: flex;
-   width: 80vw;
-   overflow: hidden;
-   padding-top: 40px;
- }
- /*SECCIÓN 4*/
- .S4-title {
-   font-size: 2rem;
-   font-weight: 700;
-   text-align: center;
-   padding-top: 13.5vh;
-   font-family: "Buenard", serif;
-   letter-spacing: 1;
- }
- .S4-subtitle {
-   font-size: 0.8rem;
-   text-align: center;
-   margin: 0vh 2vh 1vh 2vh;
- }
- .S4-container {
-   flex-direction: column;
-   height: 100vh;
-   width: 100%;
-   align-items: center;
-   justify-content: center;
-   padding: 10%;
-   margin-top: 20%;
- }
- .S4-card {
-   width: 100%; /* Ocupa el ancho completo */
-   height: 6vh; /* Ajusta el tamaño para que no sea tan alto */
-   margin: 10px 0;
- }
+  /*SECCIÓN 2*/
+  .imagen-central-responsive:nth-child(2) {
+    display: flex;
+    width: 80vw;
+    overflow: hidden;
+    padding-top: 40px;
+  }
+  /*SECCIÓN 4*/
+  .S4-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 13.5vh;
+    font-family: "Buenard", serif;
+    letter-spacing: 1;
+  }
+  .S4-subtitle {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 0vh 2vh 1vh 2vh;
+  }
+  .S4-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    margin-top: 20%;
+  }
+  .S4-card {
+    width: 100%; /* Ocupa el ancho completo */
+    height: 6vh; /* Ajusta el tamaño para que no sea tan alto */
+    margin: 10px 0;
+  }
 
- input:checked + label {
-   width: 100%;
-   height: 20vh; /* Expande la tarjeta seleccionada */
- }
+  input:checked + label {
+    width: 100%;
+    height: 20vh; /* Expande la tarjeta seleccionada */
+  }
 
- .S4-card > .row > .icon {
-   background: #223;
-   color: white;
-   border-radius: 50%;
-   width: 30px;
-   height: 30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 50px 15px 5px 15px;
- }
- .S4-card > .row > .description {
-   display: flex;
-   justify-content: flex-end;
-   flex-direction: column;
-   overflow: hidden;
-   height: 80px;
-   width: 200px;
-   opacity: 0;
-   transform: translateY(30px);
-   transition-delay: 0.3s;
-   transition: all 0.3s ease;
- }
+  .S4-card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 15px 5px 15px;
+  }
+  .S4-card > .row > .description {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+  }
 
- .description h4 {
-   text-transform: uppercase;
-   font-size: 0.8rem;
-   font-weight: 700;
- }
+  .description h4 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
 }
-/*TERMINA SECCIÓN 4*/
+
 /*INICIA FOOTER*/
-footer * { 
-   color: white !important; /* Se aplica a todo el contenido del footer */
+footer * {
+  color: white !important; /* Se aplica a todo el contenido del footer */
 }
 footer {
- background-color: #282d40;
- text-align: center;
- padding: 10px 20px 20px 20px;
+  background-color: #282d40;
+  text-align: center;
+  padding: 10px 20px 20px 20px;
 }
 .social-icons {
- margin: 10px 0;
+  margin: 10px 0;
 }
 .social-icons a {
- display: inline-block;
- margin: 0 10px;
- color: white !important;
- text-decoration: none;
- font-size: 24px;
+  display: inline-block;
+  margin: 0 10px;
+  color: white !important;
+  text-decoration: none;
+  font-size: 24px;
 }
 .social-icons a:hover {
- color: #ddd;
+  color: #ddd;
 }
 @media (max-width: 600px) {
- footer {
-   padding: 5px 15px 15px 15px;
-     font-size: 14px;
- }
- .social-icons a {
-     font-size: 20px;
- }
+  footer {
+    padding: 5px 15px 15px 15px;
+    font-size: 14px;
+  }
+  .social-icons a {
+    font-size: 20px;
+  }
 }
 /*TERMINA FOOTER*/
 
-
 @media (width < 1500px) {
-
   .servicios .icono1 img,
   .servicios .icono2 img,
   .servicios .icono3 img {
@@ -999,9 +965,6 @@ footer {
     pointer-events: none;
     font-size: 15px;
   }
-
-
-
 
   .servicios .icono1,
   .servicios .icono2,
@@ -1028,18 +991,17 @@ footer {
 }
 
 @media (max-width: 1200px) {
-
   .fondo3 {
     width: 100%;
     height: 50vh;
     opacity: 0.7;
   }
 
-  .S3-title{
+  .S3-title {
     font-size: 25px;
     transform: translateY(-400px);
   }
-  
+
   .content {
     font-size: 15px;
     max-width: 90%;
@@ -1077,9 +1039,6 @@ footer {
   }
 }
 
-
-
-
 @media (max-width: 800px) {
   .fondo3 {
     width: 100%;
@@ -1087,10 +1046,9 @@ footer {
     opacity: 0.7;
   }
 
-  .S3-title{
+  .S3-title {
     font-size: 15px;
     transform: translateY(-220px);
-    
   }
 
   .content {
@@ -1103,7 +1061,7 @@ footer {
   .servicios {
     transform: translateY(-250px);
     gap: 30px;
-  width: 50%;
+    width: 50%;
   }
 
   .servicios .icono1 img,
@@ -1136,19 +1094,17 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #S4-Title  {
+  #S4-Title {
     margin-top: 60px;
     font-size: 30px;
-   
   }
 
-  #S4-h1{
+  #S4-h1 {
     font-size: 20px;
     max-width: 80%;
     min-width: 80%;
     width: 50%;
     margin: auto;
-    
   }
 
   .card p {
@@ -1164,7 +1120,7 @@ footer {
     height: 50px;
   }
 
-  .card{
+  .card {
     padding: px;
     margin: -10px;
     margin-left: 10px;
@@ -1175,16 +1131,9 @@ footer {
   .map {
     display: none;
   }
-
-
 }
 
-
-
 @media (max-width: 400px) {
-
-
-
   .fondo3 {
     width: 100%;
     height: 50vh;
@@ -1203,7 +1152,6 @@ footer {
     transform: translateY(-90px);
     margin-bottom: -100px;
     line-height: 15px;
-
   }
 
   .servicios {
@@ -1248,8 +1196,6 @@ footer {
   .section4__container .header p {
     font-size: 10px;
   }
-    
- 
 
   .testimonials__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1259,13 +1205,12 @@ footer {
     display: none;
   }
 
-  #S4-Title  {
+  #S4-Title {
     font-size: 20px;
     margin-bottom: 20px;
-   
   }
 
-  #S4-h1{
+  #S4-h1 {
     font-size: 12px;
   }
 
@@ -1286,19 +1231,12 @@ footer {
     height: 40px;
   }
 
-  .card{
+  .card {
     padding: 8px;
     margin: -10px;
     margin-left: 10px;
     margin-right: 10px;
     gap: 10px;
   }
-
-  
-
- 
 }
-
-
 /*TERMINA SECCIÓN */
-
